@@ -17,7 +17,11 @@ myArray.forEach((item) => {
     .then((response) => {
       const html = response.data;
       const $ = cheerio.load(html);
-      $(`a:contains(${keyword || keyword2 || keyword3 || keyword4})`,html).each(function () {//arrow function wont work here
+      $(
+        `a:contains(${keyword || keyword2 || keyword3 || keyword4})`,
+        html
+      ).each(function () {
+        //arrow function wont work here
         const title = $(this).text();
         const url = $(this).attr("href");
 
@@ -31,16 +35,14 @@ myArray.forEach((item) => {
     .catch((err) => {
       console.log("there was an error with you request...", err);
     });
-   
 });
 
 app.get("/", async (req, res) => {
   if (listings !== []) {
-      res.status(200).json(listings);
+    res.status(200).json(listings);
   }
 });
 
 app.listen(PORT, () => {
   console.log("port is running on ", PORT);
 });
-
