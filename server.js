@@ -5,13 +5,9 @@ const cheerio = require("cheerio");
 const PORT = process.env.PORT || 8001;
 const { myArray } = require("./myArray");
 
-const articles = [];
+const listings = [];
 
-app.get("/", (req, res) => {
-  res.status(200).json("welcome to my JobListings API");
-});
-
-app.get("/listings", async (req, res) => {
+app.get("/", async (req, res) => {
   const keyword = "Developer";
   const keyword2 = "Software";
   const keyword3 = "Entwickler";
@@ -32,7 +28,7 @@ app.get("/listings", async (req, res) => {
           const title = $(this).text();
           const url = $(this).attr("href");
 
-          articles.push({
+          listings.push({
             title,
             url: item.base + url,
             source: item.name,
@@ -43,11 +39,13 @@ app.get("/listings", async (req, res) => {
         console.log("there was an error with you request...", err);
       });
   });
-  if (articles !== []) {
-    await res.status(200).json(articles);
+  if (listings !== []) {
+    await res.status(200).json(listings);
   }
 });
 
 app.listen(PORT, () => {
   console.log("port is running on ", PORT);
 });
+
+module.exports=listings
