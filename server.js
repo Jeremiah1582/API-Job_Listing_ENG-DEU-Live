@@ -16,8 +16,11 @@ app.get("/", (req, res) => {
 app.get("/listings", async (req, res) => {
   const keyword = "Developer";
   const keyword2 = "Software";
-  const keyword3 = "Entwickler";
+  const keyword3 = "Frontend";
   const keyword4 = "React";
+  const keyword5 = "cloud";
+  const keyword6 = "AWS";
+
   myArray.forEach((item) => {
     axios
       .get(`${item.link}`)
@@ -25,7 +28,7 @@ app.get("/listings", async (req, res) => {
         const html = response.data;
         const $ = cheerio.load(html);
         // 1
-        $(`a:contains(${keyword || keyword2 || keyword3 || keyword4})`,html).each(function () { //arrow function wont work here
+        $(`a:contains(${keyword || keyword2 || keyword3 || keyword4 || keyword5 || keyword6})`,html).each(function () { //arrow function wont work here
          
           const title = $(this).text();
           const url = $(this).attr("href");
