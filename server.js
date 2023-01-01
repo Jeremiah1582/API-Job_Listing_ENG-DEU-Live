@@ -16,11 +16,12 @@ app.get("/", (req, res) => {
 app.get("/listings", async (req, res) => {
   const keyword = "Developer";
   const keyword2 = "Software";
-  const keyword3 = "Frontend";
+  const keyword3 = "Frontend" || "Frontend Developer";
   const keyword4 = "React";
   const keyword5 = "cloud";
   const keyword6 = "AWS";
-  
+
+
 
   myArray.forEach((item) => {
     axios

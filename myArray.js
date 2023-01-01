@@ -37,24 +37,24 @@ exports.myArray = [
    // //     link:"https://remote.co/remote-jobs/developer/",
    // //     base:"",
    // //  },
-    {
-       name: "reed",
-        region: "UK",
-       link:"https://www.reed.co.uk/jobs/developer-jobs",
-       base:"https://www.reed.co.uk",
-    },
-    {
-       name: "totaljobs",
-        region: "UK",
-       link:"https://www.totaljobs.com/jobs/developer?radius=10",
-       base:"",
-    },
-    {
-       name: "universal jobmatch",
-        region: "UK",
-       link:"https://findajob.dwp.gov.uk/search?q=developer&w=",
-       base:"",
-    },
+   //  {
+   //     name: "reed",
+   //      region: "UK",
+   //     link:"https://www.reed.co.uk/jobs/developer-jobs",
+   //     base:"https://www.reed.co.uk",
+   //  },
+   //  {
+   //     name: "totaljobs",
+   //      region: "UK",
+   //     link:"https://www.totaljobs.com/jobs/developer?radius=10",
+   //     base:"",
+   //  },
+   //  {
+   //     name: "universal jobmatch",
+   //      region: "UK",
+   //     link:"https://findajob.dwp.gov.uk/search?q=developer&w=",
+   //     base:"",
+   //  },
    // //  {//need to select a different element for this to work
    // //     name: "jobsite",
    // //      region: "UK",
@@ -67,10 +67,10 @@ exports.myArray = [
    // //     link:"https://www.monster.co.uk/jobs/search?q=developer&where=&page=1&so=m.h.s",
    // //     base:"",
    // //  },
-    {
-       name: "the guardian jobs",
-        region: "UK",
-       link:"https://jobs.theguardian.com/searchjobs/?Keywords=developer&radialtown=&LocationId=&RadialLocation=30",
-       base:"https://jobs.theguardian.com/",
-    },
+   //  {
+   //     name: "the guardian jobs",
+   //      region: "UK",
+   //     link:"https://jobs.theguardian.com/searchjobs/?Keywords=developer&radialtown=&LocationId=&RadialLocation=30",
+   //     base:"https://jobs.theguardian.com/",
+   //  },
   ];
