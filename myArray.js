@@ -5,7 +5,7 @@ exports.myArray = [
        name: "linkedin",
        region: "europe",
        link:"https://www.linkedin.com/jobs/search/?currentJobId=3306864994&f_WT=2&geoId=100506914&keywords=developer&location=Europe&refresh=true",
-       base:"https://www.linkedin.com/",
+       base:"",
     },
    //  { //need to select a different element for this to work
    //     name: "indeed",
@@ -71,6 +71,6 @@ exports.myArray = [
        name: "the guardian jobs",
         region: "UK",
        link:"https://jobs.theguardian.com/searchjobs/?Keywords=developer&radialtown=&LocationId=&RadialLocation=30",
-       base:"",
+       base:"https://jobs.theguardian.com/",
     },
   ];

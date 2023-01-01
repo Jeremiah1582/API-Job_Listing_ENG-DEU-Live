@@ -20,6 +20,7 @@ app.get("/listings", async (req, res) => {
   const keyword4 = "React";
   const keyword5 = "cloud";
   const keyword6 = "AWS";
+  
 
   myArray.forEach((item) => {
     axios
