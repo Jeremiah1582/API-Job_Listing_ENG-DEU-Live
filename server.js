@@ -9,7 +9,7 @@ const articles = [];
 const specificArticle = [];
 
 app.get("/", (req, res) => {
-  res.status(200).json("welcome to my JobListings API");
+  res.status(200).json('w€LLLc0mE to my JobListings API. To view the content available add the route " /listings " to the end of the url in the browser');
 });
 // this is your first scraping tool-complete
 
