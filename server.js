@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/listings", async (req, res) => {
-  const keywords = ["Developer"];
+  const keywords = ["Developer", "Software", "Frontend", "Frontend Developer", "React", "cloud", "AWS"];
   const articles = [];
 
   await Promise.all(
@@ -24,6 +24,7 @@ app.get("/listings", async (req, res) => {
         .then((response) => {
           const html = response.data;
           const $ = cheerio.load(html);
+          let count = 0; // Counter for each URL
 
           keywords.forEach((keyword) => {
             $(`a:contains(${keyword})`, html).each(function () {
@@ -35,6 +36,12 @@ app.get("/listings", async (req, res) => {
                 url: item.base + url,
                 source: item.name,
               });
+
+              // Increment the counter and break the loop once it reaches five
+              count++;
+              if (count >= 2) {
+                return false;
+              }
             });
           });
         })
