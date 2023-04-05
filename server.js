@@ -17,40 +17,37 @@ app.get("/listings", async (req, res) => {
   const keywords = ["Developer", "Software", "Frontend", "Frontend Developer", "React", "cloud", "AWS"];
   const articles = [];
 
-  await Promise.all(
-   myArray.map((item) =>
-      axios
-        .get(item.link)
-        .then((response) => {
-          const html = response.data;
-          const $ = cheerio.load(html);
-          let count = 0; // Counter for each URL
+  for (const item of myArray) {
+    try {
+      const response = await axios.get(item.link);
+      const html = response.data;
+      const $ = cheerio.load(html);
+      let count = 0; // Counter for each URL
 
-          keywords.forEach((keyword) => {
-            $(`a:contains(${keyword})`, html).each(function () {
-              const title = $(this).text();
-              const url = $(this).attr("href");
+      for (const keyword of keywords) {
+        $(`a:contains(${keyword})`, html).each(function () {
+          const title = $(this).text();
+          const url = $(this).attr("href");
 
-              articles.push({
-                title,
-                url: item.base + url,
-                source: item.name,
-              });
-
-              // Increment the counter and break the loop once it reaches five
-              count++;
-              if (count >= 2) {
-                return false;
-              }
-            });
+          articles.push({
+            title,
+            url: item.base + url,
+            source: item.name,
           });
-        })
-        .catch((err) => {
-          console.log("there was an error with your request...", err);
-        })
-    )
-  );
-  await res.status(200).json(articles);
+
+          // Increment the counter and break the loop once it reaches two
+          count++;
+          if (count >= 2) {
+            return false;
+          }
+        });
+      }
+    } catch (err) {
+      console.log("there was an error with your request...", err);
+    }
+  }
+
+  res.status(200).json(articles);
 });
 
 app.get("/listings/:paramsId", (req, res) => {
