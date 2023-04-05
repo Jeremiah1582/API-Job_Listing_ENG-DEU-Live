@@ -5,19 +5,19 @@ const cheerio = require("cheerio");
 const PORT = process.env.PORT || 8001;
 const { myArray } = require("./myArray");
 
-app.get("/", (req, res) => {
-  res
-    .status(200)
-    .json(
-      'w€LLLc0mE to my JobListings API. To view the content available add the route " /listings " to the end of the url in the browser'
-    );
-});
+// app.get("/", (req, res) => {
+//   res
+//     .status(200)
+//     .json(
+//       'w€LLLc0mE to my JobListings API. To view the content available add the route " /listings " to the end of the url in the browser'
+//     );
+// });
 
-app.get("/listings", async (req, res) => {
+app.get("/", async (req, res) => {
   const keywords = ["Developer", "Software", "Frontend", "Frontend Developer", "React", "cloud", "AWS"];
   const articles = [];
 
-  Promise.all(
+  await Promise.all(
    myArray.map((item) =>
       axios
         .get(item.link)
