@@ -7,6 +7,12 @@ exports.myArray = [
        link:"https://www.linkedin.com/jobs/search/?currentJobId=3306864994&f_WT=2&geoId=100506914&keywords=developer&location=Europe&refresh=true",
        base:"",
     },
+    {
+       name: "4Scotty",
+       region: "europe",
+       link:"https://static.4scotty.com/top-jobs",
+       base:"",
+    },
    //  { //need to select a different element for this to work
    //     name: "indeed",
    //     region: "europe",
