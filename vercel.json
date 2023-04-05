@@ -2,13 +2,11 @@
   "version": 2,
   "name": "api-job-listing-eng-deu-live",
   "builds": [
-    { "src": "server.js", "use": "@vercel/node" }
-  ],
-  "functions": {
-    "api/*": {
-      "maxDuration": 30
+    { "src": "server.js", 
+      "use": "@vercel/node",
+      "config":{ "maxDuration": 30}
     }
-  },
+  ],
   "routes": [
     { "src": "/(.*)", "dest": "/server.js" }
   ]
