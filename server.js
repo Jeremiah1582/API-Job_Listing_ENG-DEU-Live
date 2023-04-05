@@ -17,8 +17,8 @@ app.get("/listings", async (req, res) => {
   const keywords = ["Developer", "Software", "Frontend", "Frontend Developer", "React", "cloud", "AWS"];
   const articles = [];
 
-  await Promise.all(
-    myArray.map((item) =>
+  Promise.all(
+   myArray.map((item) =>
       axios
         .get(item.link)
         .then((response) => {
@@ -50,8 +50,7 @@ app.get("/listings", async (req, res) => {
         })
     )
   );
-
-  res.status(200).json(articles);
+  await res.status(200).json(articles);
 });
 
 app.get("/listings/:paramsId", (req, res) => {
