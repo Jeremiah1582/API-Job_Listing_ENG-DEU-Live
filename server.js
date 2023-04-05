@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/listings", async (req, res) => {
-  const keywords = ["Developer", "Software", "Frontend", "Frontend Developer", "React", "cloud", "AWS"];
+  const keywords = ["Developer"];
   const articles = [];
 
   await Promise.all(
