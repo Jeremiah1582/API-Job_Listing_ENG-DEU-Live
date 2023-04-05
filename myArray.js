@@ -7,30 +7,30 @@ exports.myArray = [
        link:"https://www.linkedin.com/jobs/search/?currentJobId=3306864994&f_WT=2&geoId=100506914&keywords=developer&location=Europe&refresh=true",
        base:"",
     },
-    {
-       name: "4Scotty",
-       region: "europe",
-       link:"https://static.4scotty.com/top-jobs",
-       base:"",
-    },
+   //  {
+   //     name: "4Scotty",
+   //     region: "europe",
+   //     link:"https://static.4scotty.com/top-jobs",
+   //     base:"",
+   //  },
    //  { //need to select a different element for this to work
    //     name: "indeed",
    //     region: "europe",
    //     link:"https://de.indeed.com/jobs?q=all&l=Remote&vjk=94ac3a0aeba2370d",
    //     base:"",
    //  },
-    {
-       name: "stepstone",
-       region: "europe",
-       link:"https://www.stepstone.de/jobs/developer/in-remote?radius=30&q=developer+",
-       base:"",
-    },
-    {
-       name: "adzuna",
-        region: "europe",
-       link:"https://www.adzuna.de/search?q=software%20developer",
-       base:"",
-    },
+   //  {
+   //     name: "stepstone",
+   //     region: "europe",
+   //     link:"https://www.stepstone.de/jobs/developer/in-remote?radius=30&q=developer+",
+   //     base:"",
+   //  },
+   //  {
+   //     name: "adzuna",
+   //      region: "europe",
+   //     link:"https://www.adzuna.de/search?q=software%20developer",
+   //     base:"",
+   //  },
    // //  {//need to select a different element for this to work
    // //     name: "bing",
    // //      region: "europe",
