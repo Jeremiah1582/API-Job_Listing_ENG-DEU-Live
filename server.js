@@ -9,7 +9,7 @@ app.get("/", (req, res) => {
   res
     .status(200)
     .json(
-      'w€LLLc0mE to my JobListings API. To view the content available add the route " /listings " to the end of the url in the browser'
+      'w€LLLc0mE to my JobListings API. To view the content available add the route " /listings " to the end of the url in the browser: note that the Serveless function will time out due to the project being hosted on the Vercel-Free-tier which uses AWS Lambda Functions to host the code. The Application Works but you will have to download the code from guthub and run the code locally to see the results.' 
     );
 });
 
@@ -32,6 +32,7 @@ app.get("/listings", async (req, res) => {
     console.log("webscraping function failed", error);
   }
 });
+
 
 const  scrapeWeb = async (keywords) => {
   const articles = [];
